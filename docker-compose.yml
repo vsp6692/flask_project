@@ -8,9 +8,9 @@ services:
         tty: true
         image: python_nginx:latest
         ports:
-            - 80:80
+            - 80:9000
         expose:
-            - 80
+            - 900
         restart: always
 
     postgres:
