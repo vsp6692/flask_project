@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "testazurecluster-ccf2"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "testazurecluster-ccf2"
+  template:
+    metadata:
+      labels:
+        app: "testazurecluster-ccf2"
+    spec:
+      containers:
+        - name: "testazurecluster-ccf2"
+          image: "testazuredockerregistrypython.azurecr.io/testazurecluster"
+          ports:
+          - containerPort: 80
